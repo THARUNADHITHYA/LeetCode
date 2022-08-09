@@ -1,0 +1,8 @@
+class Solution {
+    public int mySqrt(int x) {
+        double square_root_d = Math.sqrt(x);
+        int square_root = (int)square_root_d;
+        return square_root;
+        
+    }
+}
