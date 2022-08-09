@@ -1,0 +1,40 @@
+class Solution {
+    public int addDigits(int num) {
+        int count =0;
+        int sum =0;
+        int val =0;
+        if((num>=0&&num<=9)){
+            return num;
+            }
+        if(count==0)
+        {
+            count++;
+            val = number(num,sum);
+        }
+        if(val>=0&&val<=9)
+            return val;
+        else
+        {
+            while(val>9)
+            {
+            num = val;
+            sum =0;
+            val =number(num,sum);
+            }
+        }
+        return val;
+    }
+     
+    static int number(int num,int sum)
+    {
+        while(num>0)
+        {
+            sum=sum+(num%10);
+            num=num/10;
+        }
+        return sum;
+    }
+    
+
+    
+}
